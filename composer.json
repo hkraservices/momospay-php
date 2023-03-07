@@ -1,0 +1,19 @@
+{
+    "name": "mpay/mpay-php",
+    "description": "Php sdk for mpay payment gateway",
+    "version": "0.0.1",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^7.5.0"
+    },
+    "license": "MIT",
+    "authors": [{
+        "name": "MPAY",
+        "email": "contact@webcoom.net"
+    }],
+    "autoload": {
+        "psr-4": {
+            "mpay\\": "src/"
+        }
+    }
+}
