@@ -34,8 +34,6 @@ class Mpay
     public function verifyTransaction($transactionId)
     {
         try {
-
-
             $url = $this->sandbox ? "https://api-sandbox.mpay.me" : "https://api.mpay.me";
             $data = array(
                 'transactionId' => $transactionId,

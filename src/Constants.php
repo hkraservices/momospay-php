@@ -4,7 +4,8 @@ namespace Mpay;
 
 final class Constants
 {
-     const BASE_URL = "https://apimpay.webcoom.net/";
-     const SANDBOX_URL = "https://apimpay.webcoom.net/";
-     const FRONT_BASE_URL = "https://fontmpay.webcoom.net/?vue";
+     const SANDBOX_URL                  = "http://127.0.0.1:8000/";
+     const LIVE_URL                     = "https://api.momospay.com/";
+     const FRONT_BASE_URL_SANDBOX       = "https://sandbox.front.momospay.com/";
+     const FRONT_BASE_URL_LIVE          = "https://front.momospay.com/";
 }

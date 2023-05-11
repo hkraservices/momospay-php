@@ -1,19 +1,22 @@
 {
-    "name": "mpay/mpay-php",
-    "description": "Php sdk for mpay payment gateway",
-    "version": "0.0.1",
+    "name": "momospay/momospay",
+    "description": "Php sdk for mpay payment gateway momospay",
     "type": "library",
-    "require": {
-        "guzzlehttp/guzzle": "^7.5.0"
-    },
     "license": "MIT",
-    "authors": [{
-        "name": "MPAY",
-        "email": "contact@webcoom.net"
-    }],
     "autoload": {
         "psr-4": {
-            "mpay\\": "src/"
+            "Momospay\\Momospay\\": "src/"
         }
+    },
+    "authors": [
+        {
+            "name": "Kolawole H.",
+            "email": "krochdan@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.5.10"
     }
 }

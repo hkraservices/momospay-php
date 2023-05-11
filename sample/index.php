@@ -5,13 +5,39 @@ namespace Mpay;
 require '../vendor/autoload.php';
 
 include_once('../src/Mpay.php');
+include_once('../src/Transaction.php');
 include_once('../src/Constants.php');
+include_once('../src/STATUS.php');
 
-$public_key = "pk_1_zBJT1GMArcLfiXJXCVF1f2oUOQC9m4sq5s4q6Hr";
-// $private_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxx";
-// $secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+$secret_key = "***************************";
 
-$mpay = new Mpay($public_key);
-$response = $mpay->getTokens(5000, "Payment comoto", "parfait@gmail.com", 'AHT', 'Parfait', $return_url = null, "mobile", $site_domain = 'www.comooltd.com');
+Mpay::setApiKey($secret_key);
+Mpay::setEnvironment("sandbox");
 
-var_dump($response->url);
+// $transaction = Transaction::create([
+//     'transaction' => [
+//         'amount' => "100",
+//         'description' => 'Paiement trajet' . "sdsdssds",
+//     ],
+//     'customer' => [
+//         'email' => "sdsdsd",
+//         'lastname' => 'dsdd',
+//         'firstname' =>  'ddffdf'
+//     ],
+//     'custom_metadata' => [
+//         'Jaque' => 'jdf,nfnd,fdnf',
+//         "roun" => 'ndfjnjnfnff'
+//     ],
+//     'return_url' => null,
+//     'site_domains' => 'comotoltd.com',
+//     'methodepayment' => 'mobile',
+// ]);
+
+$transaction = Transaction::retrieve(1);
+
+if ($transaction) {
+    var_dump($transaction);
+}
+
+
+// var_dump($transaction);
