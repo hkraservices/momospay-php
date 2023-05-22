@@ -1,11 +1,11 @@
 {
-    "name": "momospay/momospay",
+    "name": "momospay/momospay-php",
     "description": "Php sdk for mpay payment gateway momospay",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Momospay\\Momospay\\": "src/"
+            "Momospay\\": "src/"
         }
     },
     "authors": [
@@ -15,7 +15,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "guzzlehttp/guzzle": "^7.0.1"
+    },
     "require-dev": {
         "phpunit/phpunit": "^9.5.10"
     }
