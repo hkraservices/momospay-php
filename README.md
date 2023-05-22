@@ -12,7 +12,7 @@ Using composer:
 
 ```bash
 
-    composer require mpay/mpay-php
+    composer require momospay/momospay-php
 
 ```
 

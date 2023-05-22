@@ -1,18 +1,14 @@
 <?php
 
-namespace Mpay;
+use Momospay\Momospay;
+use Momospay\Transaction;
 
-require '../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
-include_once('../src/Mpay.php');
-include_once('../src/Transaction.php');
-include_once('../src/Constants.php');
-include_once('../src/STATUS.php');
+$secret_key = "hgdghvdfdvfdvfdbdvvdvfdvfvfvfbbbdbdbbd";
 
-$secret_key = "***************************";
-
-Mpay::setApiKey($secret_key);
-Mpay::setEnvironment("sandbox");
+Momospay::setApiKey($secret_key);
+Momospay::setEnvironment("sandbox");
 
 // $transaction = Transaction::create([
 //     'transaction' => [

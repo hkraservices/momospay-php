@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpay;
+namespace Momospay;
 
 /**
  * Created by PhpStorm.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpay;
+namespace Momospay;
 
 /**
  * Created by vscode
@@ -9,7 +9,7 @@ namespace Mpay;
  * Time: 02:23
  */
 
-class Mpay
+class Momospay
 {
     /**
      * key for payment
@@ -23,21 +23,21 @@ class Mpay
 
     public static function setApiKey(string $secret_key)
     {
-        Mpay::$secret_key = $secret_key ?? null;
+        Momospay::$secret_key = $secret_key ?? null;
     }
 
     public static function getApiKey()
     {
-        return Mpay::$secret_key;
+        return Momospay::$secret_key;
     }
 
     public static function setEnvironment(string $environement)
     {
-        Mpay::$environement = $environement ?? null;
+        Momospay::$environement = $environement ?? null;
     }
 
     public static function getEnvironment()
     {
-        return   Mpay::$environement;
+        return   Momospay::$environement;
     }
 }

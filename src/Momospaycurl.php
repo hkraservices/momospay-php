@@ -1,8 +1,8 @@
 <?php
 
-namespace Mpay;
+namespace Momospay;
 
-class Mpay
+class Momospay
 {
 
     // Publishable Api key
@@ -19,7 +19,7 @@ class Mpay
     private $sandbox;
 
     /**
-     * Mpay constructor.
+     * Momospay constructor.
      */
     public function __construct($public_key, $secret = null, $sandbox = false)
     {
@@ -34,7 +34,7 @@ class Mpay
     public function verifyTransaction($transactionId)
     {
         try {
-            $url = $this->sandbox ? "https://api-sandbox.mpay.me" : "https://api.mpay.me";
+            $url = $this->sandbox ? Constants::SANDBOX_URL : Constants::LIVE_URL;
             $data = array(
                 'transactionId' => $transactionId,
             );

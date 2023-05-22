@@ -1,17 +1,17 @@
 <?php
 
-namespace Mpay;
+namespace Momospay;
 
+use GuzzleHttp;
 use GuzzleHttp\Exception\RequestException;
-use function GuzzleHttp\json_encode;
-
+use GuzzleHttp\json_encode;
 
 
 class Transaction
 {
 
     /**
-     * @var Mpay
+     * @var Momospay
      */
 
     /**
@@ -49,9 +49,9 @@ class Transaction
 
     public function __construct()
     {
-        $this->curl = new \GuzzleHttp\Client();
-        $this->secret_key     = Mpay::getApiKey();
-        $this->environement   = Mpay::getEnvironment();
+        $this->curl = new GuzzleHttp\Client();
+        $this->secret_key     = Momospay::getApiKey();
+        $this->environement   = Momospay::getEnvironment();
     }
 
     public static function get_self()
