@@ -1,6 +1,6 @@
 <?php
 
-namespace Momospay;
+namespace Mpay;
 
 /**
  * Created by vscode

@@ -1,7 +1,7 @@
 <?php
 
-use Momospay\Momospay;
-use Momospay\Transaction;
+use Mpay\Momospay;
+use Mpay\Transaction;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

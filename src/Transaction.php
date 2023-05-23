@@ -1,6 +1,6 @@
 <?php
 
-namespace Momospay;
+namespace Mpay;
 
 use GuzzleHttp;
 use GuzzleHttp\Exception\RequestException;

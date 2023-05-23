@@ -1,8 +1,8 @@
 <?php
 
-namespace Momospay;
+namespace Mpay;;
 
-class Momospay
+class Momospaycurl
 {
 
     // Publishable Api key
