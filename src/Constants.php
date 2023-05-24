@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpay;
+namespace Momospay;
 
 final class Constants
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpay;;
+namespace Momospay;
 
 class Momospaycurl
 {
@@ -17,6 +17,32 @@ class Momospaycurl
     private $curl;
 
     private $sandbox;
+
+    /**
+     * @return mixed
+     */
+    public function getPublicKey()
+    {
+        return $this->public_key;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrivateKey()
+    {
+        return $this->private_key;
+    }
+
+    /**
+     * @return null
+     */
+    public function getSecret()
+    {
+        return $this->secret;
+    }
+
+
 
     /**
      * Momospay constructor.
@@ -136,27 +162,5 @@ class Momospaycurl
     //     return substr($string, $ini, $len);
     // }
 
-    /**
-     * @return mixed
-     */
-    public function getPublicKey()
-    {
-        return $this->public_key;
-    }
 
-    /**
-     * @return mixed
-     */
-    public function getPrivateKey()
-    {
-        return $this->private_key;
-    }
-
-    /**
-     * @return null
-     */
-    public function getSecret()
-    {
-        return $this->secret;
-    }
 }
