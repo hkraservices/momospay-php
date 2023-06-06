@@ -19,7 +19,7 @@ class Transaction
      */
 
     /**
-     * @var STATUS
+     * @var Status
      */
 
     /**
@@ -72,7 +72,7 @@ class Transaction
 
         if ($dataPayment ?? false) {
             try {
-                $response = self::get_self()->curl->post($const . 'api/v1/transactions/getTokensSecretKey', [
+                $response = self::get_self()->curl->post($const . 'api/v1/transactions/token-secret-key', [
                     "json" => [
                         'infoPayment' => \json_encode([
                             'transaction' => $dataPayment['transaction'],
@@ -101,7 +101,7 @@ class Transaction
                 // Otherwise, we'll just pass a network unavailable message.
 
                 if ($e->hasResponse()) {
-                    return \json_encode(array("status" => STATUS::FAILED));
+                    return \json_encode(array("status" => Status::FAILED));
                 } else {
                     return  \json_decode($e->getMessage(), 503);
                 }
@@ -113,7 +113,8 @@ class Transaction
 
     public static function retrieve(int $transactionId)
     {
-        $response = null;
+        $responses = null;
+
         try {
             $const = self::get_self()->environement == 'live' ? Constants::LIVE_URL : Constants::SANDBOX_URL;
 
@@ -124,15 +125,16 @@ class Transaction
                     'X-SECRET-KEY' => self::get_self()->secret_key
                 ]
             ));
-            $response = \json_decode($responses->getBody()->getContents());
 
-            if ($response->success) {
-                return \json_decode(\json_encode($response->data));
+            $responses = \json_decode($responses->getBody()->getContents());
+
+            if ($responses->success) {
+                return \json_decode(\json_encode($responses->data));
             }
 
-            return \json_encode(array("status" => STATUS::TRANSACTION_NOT_FOUND));
+            return \json_encode(array("status" => Status::TRANSACTION_NOT_FOUND));
         } catch (\Exception $e) {
-            return \json_encode(array("status" => STATUS::TRANSACTION_NOT_FOUND));
+            return \json_encode(array("status" => Status::TRANSACTION_NOT_FOUND));
         }
     }
 }

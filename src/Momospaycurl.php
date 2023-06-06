@@ -117,7 +117,7 @@ class Momospaycurl
 
     //             return json_decode((string)$reponse);
     //         }
-    //         $reponse = json_encode(array( "status" => STATUS::FAILED));
+    //         $reponse = json_encode(array( "status" => Status::FAILED));
     //         return json_decode((string)$response);
     //     }
     // }
@@ -147,7 +147,7 @@ class Momospaycurl
     //             $reponse = "{".$this->get_string_between(Psr7\str($e->getResponse()), "{","}")."}";
     //             return json_decode((string)$reponse);
     //         }
-    //         $reponse = json_encode(array( "status" => STATUS::FAILED));
+    //         $reponse = json_encode(array( "status" => Status::FAILED));
     //         return json_decode((string)$response);
     //     }
     // }
